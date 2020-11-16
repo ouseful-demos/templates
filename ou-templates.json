@@ -33,6 +33,7 @@
     },
     "stackFile": "",
     "name": "tm129vce",
+    "logo":"https://github.com/innovationOUtside/tm129-robotics2020/raw/master/.jupyter/custom/OU-logo-83x65.png",
     "env": [
       {
         "name": "JUPYTER_TOKEN",
@@ -64,6 +65,7 @@
     },
     "stackFile": "",
     "name": "tm351vce",
+    "logo":"https://github.com/innovationOUtside/tm129-robotics2020/raw/master/.jupyter/custom/OU-logo-83x65.png",
     "env": [
       {
         "name": "JUPYTER_TOKEN",
@@ -95,6 +97,7 @@
     },
     "stackFile": "",
     "name": "tm129rpipoc",
+    "logo":"https://github.com/innovationOUtside/tm129-robotics2020/raw/master/.jupyter/custom/OU-logo-83x65.png",
     "env": [
       {
         "name": "JUPYTER_TOKEN",
