@@ -1,32 +1,23 @@
-{
-	"version": "2",
-	"templates": [{
-			"type": 1,
-			"title": "JupyterNotebook",
-			"description": "Simple Jupyter notebook server",
-			"categories": [
-				"docker"
-			],
-			"platform": "arm32v7",
-			"logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Jupyter_logo.svg/1200px-Jupyter_logo.svg.png",
-			"image": "JupyterLogo",
-			"ports": [
-				"8888/tcp"
-			]
-		},
-		{
-			"type": 1,
-			"title": "TM129 robotics",
-			"description": "TM129 robotics demo",
-			"categories": [
-				"education"
-			],
-			"platform": "arm32v7",
-			"logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/nginx.png",
-			"image": "nginx:latest",
-			"ports": [
-				"8129/tcp"
-			]
-		}
-  ]
-}
+[
+  {
+    "Id": 1,
+    "type": 1,
+    "title": "Jupyter notebook (RPi)",
+    "description": "Jupyter notebook server for Raspberry Pi",
+    "administrator_only": false,
+    "image": "andresvidal/jupyter-armv7l:latest",
+    "repository": {
+      "url": "",
+      "stackfile": ""
+    },
+    "stackFile": "",
+    "name": "nbserver",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Jupyter_logo.svg/1200px-Jupyter_logo.svg.png",
+    "note": "Example Jupyter notebook server running on Raspberry Pi",
+    "network": "bridge",
+    "ports": [
+      "8888/tcp"
+    ],
+    "restart_policy": "always"
+  }
+]
