@@ -26,7 +26,7 @@
     "title": "TM129 Robotics VCE (single container)",
     "description": "TM129 Robotics Block Virtual Computing Environment (all-on-one)",
     "administrator_only": false,
-    "image": "ousefulcoursecontainers/ou-tm129",
+    "image": "ousefulcoursecontainers/ou-tm129:current",
     "repository": {
       "url": "",
       "stackfile": ""
@@ -58,7 +58,7 @@
     "title": "TM351 VCE (single container)",
     "description": "TM351 Virtual Computing Environment (all-on-one)",
     "administrator_only": false,
-    "image": "ousefulcoursecontainers/ou-tm351",
+    "image": "ousefulcoursecontainers/ou-tm351:current",
     "repository": {
       "url": "",
       "stackfile": ""
