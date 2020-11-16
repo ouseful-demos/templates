@@ -1,0 +1,32 @@
+{
+	"version": "2",
+	"templates": [{
+			"type": 1,
+			"title": "JupyterNotebook",
+			"description": "Simple Jupyter notebook server",
+			"categories": [
+				"docker"
+			],
+			"platform": "arm32v7",
+			"logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Jupyter_logo.svg/1200px-Jupyter_logo.svg.png",
+			"image": "JupyterLogo",
+			"ports": [
+				"8888/tcp"
+			]
+		},
+		{
+			"type": 1,
+			"title": "TM129 robotics",
+			"description": "TM129 robotics demo",
+			"categories": [
+				"education"
+			],
+			"platform": "arm32v7",
+			"logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/nginx.png",
+			"image": "nginx:latest",
+			"ports": [
+				"8129/tcp"
+			]
+		}
+  ]
+}
