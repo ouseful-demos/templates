@@ -19,5 +19,100 @@
       "8888/tcp"
     ],
     "restart_policy": "always"
+  },
+{
+    "Id": 2,
+    "type": 1,
+    "title": "TM129 Robotics VCE (single container)",
+    "description": "TM129 Robotics Block Virtual Computing Environment (all-on-one)",
+    "administrator_only": false,
+    "image": "ousefulcoursecontainers/ou-tm129",
+    "repository": {
+      "url": "",
+      "stackfile": ""
+    },
+    "stackFile": "",
+    "name": "tm129vce",
+    "env": [
+      {
+        "name": "JUPYTER_TOKEN",
+        "default": "letmein",
+        "preset": true
+      }
+    ],
+    "categories": [
+      "TM129",
+      "OU-VCE",
+      "ouseful-course-container"
+    ],
+    "network": "bridge",
+    "ports": [
+      "8888/tcp"
+    ],
+    "restart_policy": "always"
+  },
+  {
+    "Id": 3,
+    "type": 1,
+    "title": "TM351 VCE (single container)",
+    "description": "TM351 Virtual Computing Environment (all-on-one)",
+    "administrator_only": false,
+    "image": "ousefulcoursecontainers/ou-tm351",
+    "repository": {
+      "url": "",
+      "stackfile": ""
+    },
+    "stackFile": "",
+    "name": "tm351vce",
+    "env": [
+      {
+        "name": "JUPYTER_TOKEN",
+        "default": "letmein",
+        "preset": true
+      }
+    ],
+    "categories": [
+      "TM351",
+      "OU-VCE",
+      "ouseful-course-container"
+    ],
+    "network": "bridge",
+    "ports": [
+      "8888/tcp"
+    ],
+    "restart_policy": "always"
+  },
+  {
+    "Id": 4,
+    "type": 1,
+    "title": "TM129 VCE PoC bloated (RPi)",
+    "description": "TM129 Virtual Computing Environment (Raspberry Pi), bloated proof-of-concept",
+    "administrator_only": false,
+    "image": "outm351dev/nbev3devsimruns",
+    "repository": {
+      "url": "",
+      "stackfile": ""
+    },
+    "stackFile": "",
+    "name": "tm129rpipoc",
+    "env": [
+      {
+        "name": "JUPYTER_TOKEN",
+        "default": "letmein",
+        "preset": true
+      }
+    ],
+    "categories": [
+      "TM129",
+      "RPi",
+      "arm32v7",
+      "OU-VCE",
+      "ouseful-course-container"
+    ],
+    "network": "bridge",
+    "ports": [
+      "8888/tcp"
+    ],
+    "restart_policy": "always"
   }
 ]
