@@ -2,8 +2,8 @@
 	"version": "2",
 	"templates": [{
 			"type": 1,
-			"title": "Jupyter notebook (RPi)",
-			"description": "Jupyter notebook server for Raspberry Pi",
+			"title": "Jupyter notebook",
+			"description": "Jupyter notebook server running pandas, matplotlib, scipy, sklearn",
 			"platform": "linux",
 			"image": "andresvidal/jupyter-armv7l:latest",
 			"name": "nbserver",
@@ -16,30 +16,25 @@
 		},
 		{
 			"type": 1,
-			"title": "TM129 Robotics VCE (single container)",
-			"description": "TM129 Robotics Block Virtual Computing Environment (all-on-one)",
+			"title": "OpenRefine",
+			"description": "OpenRefine server: data cleaning application",
 			"platform": "linux",
-			"image": "ousefulcoursecontainers/ou-tm129:current",
-			"name": "tm129vce",
+			"image": "oulocl/openrefine",
+			"name": "openrefine",
 			"logo": "https://github.com/innovationOUtside/tm129-robotics2020/raw/master/.jupyter/custom/OU-logo-83x65.png",
-			"env": [{
-				"name": "JUPYTER_TOKEN",
-				"default": "letmein",
-				"preset": true
-			}],
 			"categories": [
-				"TM129",
+				"OpenRefine",
 				"OU-VCE",
 				"ouseful-course-container"
 			],
 			"ports": [
-				":8888/tcp"
+				":3333/tcp"
 			],
 			"restart_policy": "always"
 		},
 		{
 			"type": 1,
-			"title": "TM351 VCE (single container)",
+			"title": "TM351 VCE (single container) [desktop only]",
 			"description": "TM351 Virtual Computing Environment (all-on-one)",
 			"platform": "linux",
 			"image": "ousefulcoursecontainers/ou-tm351:current",
@@ -62,7 +57,30 @@
 		},
 		{
 			"type": 1,
-			"title": "TM129 VCE PoC bloated (RPi)",
+			"title": "TM129 Robotics VCE [desktop only]",
+			"description": "TM219 Robotics Block Virtual Computing Environment",
+			"platform": "linux",
+			"image": "ousefulcoursecontainers/ou-tm129:current",
+			"name": "tm129vce",
+			"logo": "https://github.com/innovationOUtside/tm129-robotics2020/raw/master/.jupyter/custom/OU-logo-83x65.png",
+			"env": [{
+				"name": "JUPYTER_TOKEN",
+				"default": "letmein",
+				"preset": true
+			}],
+			"categories": [
+				"TM129",
+				"OU-VCE",
+				"ouseful-course-container"
+			],
+			"ports": [
+				":8888/tcp"
+			],
+			"restart_policy": "always"
+		},
+		{
+			"type": 1,
+			"title": "TM129 VCE PoC bloated [RPi only]",
 			"description": "TM129 Virtual Computing Environment (Raspberry Pi), bloated proof-of-concept",
 			"platform": "linux",
 			"image": "outm351dev/nbev3devsimruns",
@@ -112,7 +130,7 @@
 			],
 			"logo": "https://github.com/innovationOUtside/tm129-robotics2020/raw/master/.jupyter/custom/OU-logo-83x65.png",
 			"name": "jupyterpg",
-			"note": "The database password is PG_Pass.",
+			"note": "The default database password is: PG_Pass",
 			"platform": "linux",
 			"repository": {
 				"stackfile": "stack/jupyter_postgres.yml",
