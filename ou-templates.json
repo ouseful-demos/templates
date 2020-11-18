@@ -102,8 +102,8 @@
 				},
 				{
 					"default": "PG_Pass",
-					"label": "PG_PASSWORD",
-					"name": "PG_PASSWORD"
+					"label": "POSTGRES_PASSWORD",
+					"name": "POSTGRES_PASSWORD"
 				},
 				{
 					"label": "PORT",
