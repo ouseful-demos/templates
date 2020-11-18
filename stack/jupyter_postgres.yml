@@ -4,7 +4,7 @@ services:
   tm351:
     image: jupyter/minimal-notebook
     environment:
-      JUPYTER_TOKEN: ${JUPYTER_TOKEN}
+      JUPYTER_TOKEN: "${JUPYTER_TOKEN}"
     networks:
       - tm351
     ports:
@@ -13,7 +13,7 @@ services:
   postgres:
     image: postgres
     environment:
-      POSTGRES_PASSWORD: ${PG_PASSWORD}
+      POSTGRES_PASSWORD: "${PG_PASSWORD}"
     ports:
       - 5432:5432
     networks:
