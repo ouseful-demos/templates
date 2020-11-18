@@ -5,10 +5,10 @@
 			"title": "Jupyter notebook",
 			"description": "Jupyter notebook server running pandas, matplotlib, scipy, sklearn",
 			"platform": "linux",
-			"image": "andresvidal/jupyter-armv7l:latest",
-			"name": "nbserver",
-			"note": "Example Jupyter notebook server running on Raspberry Pi",
-			"logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Jupyter_logo.svg/1200px-Jupyter_logo.svg.png",
+			"image": "oulocl/vce-jupyter",
+			"name": "jupyterserver",
+			"note": "Example Jupyter notebook server with various datascience packages pre-installed.",
+			"logo": "https://github.com/innovationOUtside/tm129-robotics2020/raw/master/.jupyter/custom/OU-logo-83x65.png",
 			"ports": [
 				":8888/tcp"
 			],
