@@ -160,13 +160,13 @@
 			],
 			"logo": "https://github.com/innovationOUtside/tm129-robotics2020/raw/master/.jupyter/custom/OU-logo-83x65.png",
 			"name": "jupytermongo",
-			"note": "This runs a very ol version of Mongo. Current versions don't support 32 bit o/s.",
+			"note": "This runs a very old version of Mongo. Current versions don't support 32 bit o/s.",
 			"platform": "linux",
 			"repository": {
 				"stackfile": "stack/jupyter_mongo32.yml",
 				"url": "https://github.com/ouseful-demos/templates"
 			},
-			"title": "Jupyter Mongo 32",
+			"title": "Jupyter Mongo 32 [RPi only]",
 			"type": 3
 		}
 	]
