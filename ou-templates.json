@@ -138,6 +138,36 @@
 			},
 			"title": "Jupyter Postgres",
 			"type": 3
+		},
+		{
+			"categories": [
+				"TM351",
+				"VCE",
+				"Jupyter",
+				"Database",
+				"notebook"
+			],
+			"description": "Minimal Jupyter server and Mongo 32 bit database [RPi 32bit o/s only].",
+			"env": [{
+					"default": "letmein",
+					"label": "JUPYTER_TOKEN",
+					"name": "JUPYTER_TOKEN"
+				},
+				{
+					"label": "PORT",
+					"name": "PORT"
+				}
+			],
+			"logo": "https://github.com/innovationOUtside/tm129-robotics2020/raw/master/.jupyter/custom/OU-logo-83x65.png",
+			"name": "jupytermongo",
+			"note": "This runs a very ol version of Mongo. Current versions don't support 32 bit o/s.",
+			"platform": "linux",
+			"repository": {
+				"stackfile": "stack/jupyter_mongo32.yml",
+				"url": "https://github.com/ouseful-demos/templates"
+			},
+			"title": "Jupyter Mongo 32",
+			"type": 3
 		}
 	]
 }
