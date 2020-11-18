@@ -13,7 +13,7 @@ services:
   postgres:
     image: postgres
     environment:
-      POSTGRES_PASSWORD: ${DB_PWD}
+      POSTGRES_PASSWORD: ${PG_PASSWORD}
     ports:
       - 5432:5432
     networks:
