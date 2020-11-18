@@ -111,7 +111,7 @@
 			"note": "The database password is PG_Pass.",
 			"platform": "linux",
 			"repository": {
-				"stackfile": "Stack/jupyter_postgres.yml",
+				"stackfile": "stack/jupyter_postgres.yml",
 				"url": "https://github.com/ouseful-demos/templates"
 			},
 			"title": "Jupyter Postgres",
