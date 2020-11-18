@@ -1,121 +1,89 @@
-[
-  {
-    "Id": 1,
-    "type": 1,
-    "title": "Jupyter notebook (RPi)",
-    "description": "Jupyter notebook server for Raspberry Pi",
-    "administrator_only": false,
-    "image": "andresvidal/jupyter-armv7l:latest",
-    "repository": {
-      "url": "",
-      "stackfile": ""
-    },
-    "stackFile": "",
-    "name": "nbserver",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Jupyter_logo.svg/1200px-Jupyter_logo.svg.png",
-    "note": "Example Jupyter notebook server running on Raspberry Pi",
-    "network": "bridge",
-    "ports": [
-      "8888/tcp"
-    ],
-    "restart_policy": "always"
-  },
 {
-    "Id": 2,
-    "type": 1,
-    "title": "TM129 Robotics VCE (single container)",
-    "description": "TM129 Robotics Block Virtual Computing Environment (all-on-one)",
-    "administrator_only": false,
-    "image": "ousefulcoursecontainers/ou-tm129:current",
-    "repository": {
-      "url": "",
-      "stackfile": ""
-    },
-    "stackFile": "",
-    "name": "tm129vce",
-    "logo":"https://github.com/innovationOUtside/tm129-robotics2020/raw/master/.jupyter/custom/OU-logo-83x65.png",
-    "env": [
-      {
-        "name": "JUPYTER_TOKEN",
-        "default": "letmein",
-        "preset": true
-      }
-    ],
-    "categories": [
-      "TM129",
-      "OU-VCE",
-      "ouseful-course-container"
-    ],
-    "network": "bridge",
-    "ports": [
-      "8888/tcp"
-    ],
-    "restart_policy": "always"
-  },
-  {
-    "Id": 3,
-    "type": 1,
-    "title": "TM351 VCE (single container)",
-    "description": "TM351 Virtual Computing Environment (all-on-one)",
-    "administrator_only": false,
-    "image": "ousefulcoursecontainers/ou-tm351:current",
-    "repository": {
-      "url": "",
-      "stackfile": ""
-    },
-    "stackFile": "",
-    "name": "tm351vce",
-    "logo":"https://github.com/innovationOUtside/tm129-robotics2020/raw/master/.jupyter/custom/OU-logo-83x65.png",
-    "env": [
-      {
-        "name": "JUPYTER_TOKEN",
-        "default": "letmein",
-        "preset": true
-      }
-    ],
-    "categories": [
-      "TM351",
-      "OU-VCE",
-      "ouseful-course-container"
-    ],
-    "network": "bridge",
-    "ports": [
-      "8888/tcp"
-    ],
-    "restart_policy": "always"
-  },
-  {
-    "Id": 4,
-    "type": 1,
-    "title": "TM129 VCE PoC bloated (RPi)",
-    "description": "TM129 Virtual Computing Environment (Raspberry Pi), bloated proof-of-concept",
-    "administrator_only": false,
-    "image": "outm351dev/nbev3devsimruns",
-    "repository": {
-      "url": "",
-      "stackfile": ""
-    },
-    "stackFile": "",
-    "name": "tm129rpipoc",
-    "logo":"https://github.com/innovationOUtside/tm129-robotics2020/raw/master/.jupyter/custom/OU-logo-83x65.png",
-    "env": [
-      {
-        "name": "JUPYTER_TOKEN",
-        "default": "letmein",
-        "preset": true
-      }
-    ],
-    "categories": [
-      "TM129",
-      "RPi",
-      "arm32v7",
-      "OU-VCE",
-      "ouseful-course-container"
-    ],
-    "network": "bridge",
-    "ports": [
-      "8888/tcp"
-    ],
-    "restart_policy": "always"
-  }
-]
+	"version": "2",
+	"templates": [{
+			"type": 1,
+			"title": "Jupyter notebook (RPi)",
+			"description": "Jupyter notebook server for Raspberry Pi",
+			"platform": "linux",
+			"image": "andresvidal/jupyter-armv7l:latest",
+			"name": "nbserver",
+			"note": "Example Jupyter notebook server running on Raspberry Pi",
+			"logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Jupyter_logo.svg/1200px-Jupyter_logo.svg.png",
+			"ports": [
+				":8888/tcp"
+			],
+			"restart_policy": "always"
+		},
+		{
+			"type": 1,
+			"title": "TM129 Robotics VCE (single container)",
+			"description": "TM129 Robotics Block Virtual Computing Environment (all-on-one)",
+			"platform": "linux",
+			"image": "ousefulcoursecontainers/ou-tm129:current",
+			"name": "tm129vce",
+			"logo": "https://github.com/innovationOUtside/tm129-robotics2020/raw/master/.jupyter/custom/OU-logo-83x65.png",
+			"env": [{
+				"name": "JUPYTER_TOKEN",
+				"default": "letmein",
+				"preset": true
+			}],
+			"categories": [
+				"TM129",
+				"OU-VCE",
+				"ouseful-course-container"
+			],
+			"ports": [
+				":8888/tcp"
+			],
+			"restart_policy": "always"
+		},
+		{
+			"type": 1,
+			"title": "TM351 VCE (single container)",
+			"description": "TM351 Virtual Computing Environment (all-on-one)",
+			"platform": "linux",
+			"image": "ousefulcoursecontainers/ou-tm351:current",
+			"name": "tm351vce",
+			"logo": "https://github.com/innovationOUtside/tm129-robotics2020/raw/master/.jupyter/custom/OU-logo-83x65.png",
+			"env": [{
+				"name": "JUPYTER_TOKEN",
+				"default": "letmein",
+				"preset": true
+			}],
+			"categories": [
+				"TM351",
+				"OU-VCE",
+				"ouseful-course-container"
+			],
+			"ports": [
+				":8888/tcp"
+			],
+			"restart_policy": "always"
+		},
+		{
+			"type": 1,
+			"title": "TM129 VCE PoC bloated (RPi)",
+			"description": "TM129 Virtual Computing Environment (Raspberry Pi), bloated proof-of-concept",
+			"platform": "linux",
+			"image": "outm351dev/nbev3devsimruns",
+			"name": "tm129rpipoc",
+			"logo": "https://github.com/innovationOUtside/tm129-robotics2020/raw/master/.jupyter/custom/OU-logo-83x65.png",
+			"env": [{
+				"name": "JUPYTER_TOKEN",
+				"default": "letmein",
+				"preset": true
+			}],
+			"categories": [
+				"TM129",
+				"RPi",
+				"arm32v7",
+				"OU-VCE",
+				"ouseful-course-container"
+			],
+			"ports": [
+				":8888/tcp"
+			],
+			"restart_policy": "always"
+		}
+	]
+}
