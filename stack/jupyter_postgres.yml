@@ -1,23 +1,23 @@
-version: "2.4"
-
+version: "2"
 services:
-  tm351:
+  jupyter:
     image: jupyter/minimal-notebook
+    container_name: jupyter
     environment:
-      JUPYTER_TOKEN: "${JUPYTER_TOKEN}"
-    networks:
-      - tm351
+      - JUPYTER_TOKEN=${JUPYTER_TOKEN}
     ports:
       - ${PORT}:8888
-
-  postgres:
-    image: postgres
-    environment:
-      POSTGRES_PASSWORD: "${PG_PASSWORD}"
-    ports:
-      - 5432:5432
     networks:
       - tm351
+    restart: unless-stopped
+  postgres:
+    image: postgres
+    container_name: postgres
+    environment:
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+    networks:
+      - tm351
+    restart: unless-stopped
 
 networks:
   tm351:
