@@ -95,7 +95,11 @@
 				"notebook"
 			],
 			"description": "Minimal Jupyter server and PostgreSQL database.",
-			"env": [
+			"env": [{
+					"default": "letmein",
+					"label": "JUPYTER_TOKEN",
+					"name": "JUPYTER_TOKEN"
+				},
 				{
 					"default": "PG_Pass",
 					"label": "PG_PASSWORD",
