@@ -84,6 +84,39 @@
 				":8888/tcp"
 			],
 			"restart_policy": "always"
-		}
+		},
+		      {
+			"categories": [
+				"TM351",
+				"VCE",
+				"Jupyter",
+				"PostgreSQL",
+				"Database",
+				"notebook"
+			],
+			"description": "Minimal Jupyter server and PostgreSQL database.",
+			"env": [
+				{
+					"default": "PG_Pass",
+					"label": "PG_PASSWORD",
+					"name": "PG_PASSWORD"
+				},
+				{
+					"label": "PORT",
+					"name": "PORT"
+				}
+			],
+			"logo": "https://github.com/innovationOUtside/tm129-robotics2020/raw/master/.jupyter/custom/OU-logo-83x65.png",
+			"name": "jupyterpg",
+			"note": "The database password is PG_Pass.",
+			"platform": "linux",
+			"repository": {
+				"stackfile": "Stack/jupyter_postgres.yml",
+				"url": "https://github.com/ouseful-demos/templates"
+			},
+			"title": "Jupyter Postgres",
+			"type": 3
+		},
+		    
 	]
 }
