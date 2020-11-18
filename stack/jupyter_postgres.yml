@@ -4,19 +4,16 @@ services:
   tm351:
     image: jupyter/minimal-notebook
     environment:
-      JUPYTER_TOKEN: "letmein"
-    volumes:
-      - "$PWD/TM351VCE/notebooks:/home/jovyan/notebooks"
-      - "$PWD/TM351VCE/openrefine_projects:/home/jovyan/openrefine"
+      JUPYTER_TOKEN: ${JUPYTER_TOKEN}
     networks:
       - tm351
     ports:
-      - 8866:8888
+      - ${PORT}:8888
 
   postgres:
     image: postgres
     environment:
-      POSTGRES_PASSWORD: "PGPass"
+      POSTGRES_PASSWORD: ${DB_PWD}
     ports:
       - 5432:5432
     networks:
